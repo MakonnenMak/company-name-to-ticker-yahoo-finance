@@ -24,7 +24,7 @@ def name_to_tick(self):
     #Enters this information
     search.send_keys("yahoo finance "+companyname)
     search.send_keys(Keys.ENTER)
-    browser.implicitly_wait(5)
+    browser.implicitly_wait(2)
 
     #First link that is a yahoo finance link is clicked
     link=browser.find_element_by_xpath('//a[starts-with(@href,"https://finance.yahoo")]').get_attribute('href')
