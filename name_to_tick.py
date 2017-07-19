@@ -38,7 +38,7 @@ def name_to_tick(self):
 
     return(ticker)
 
-#Function uses yahoo finance to return opening ,closing, and percent change.
+#Function uses yahoo finance to return opening ,closing, and percent change. More get_ methods can be tested, available on the yahoo-finance python documentation.
 def company_data(self):
     company=Share(self)
     opening_price=company.get_open()
