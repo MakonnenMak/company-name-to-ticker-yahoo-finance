@@ -11,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from yahoo_finance import *
 
-def name_to_tick(self):
+def name_convert(self):
     #Using firefox/webdriver to search up google
 
     #Insert location of geckodriver. The default code I have entered pertains only to my location.
@@ -24,7 +24,7 @@ def name_to_tick(self):
     #Enters this information
     search.send_keys("yahoo finance "+companyname)
     search.send_keys(Keys.ENTER)
-    browser.implicitly_wait(2)
+    browser.implicitly_wait(15)
 
     #First link that is a yahoo finance link is clicked
     link=browser.find_element_by_xpath('//a[starts-with(@href,"https://finance.yahoo")]').get_attribute('href')
@@ -47,8 +47,10 @@ def company_data(self):
 
     return opening_price,closing_price, percent_change
 
+
+#Comment out when testing
 company_name=input("Enter a company name: ")
-company=name_to_tick(company_name)
+company=name_convert(company_name)
 print(company_data(company))
 
 
