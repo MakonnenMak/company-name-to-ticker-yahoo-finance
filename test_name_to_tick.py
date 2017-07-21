@@ -1,6 +1,6 @@
 
 #second function needs to be updated with the the current days informationw when testing
-#make sure the print lines at the bottom of name to tick file are commented out before testing.
+#make sure the print lines at the bottom of name to tick file are commented out before testing
 
 #testing using pytest
 import name_to_tick
