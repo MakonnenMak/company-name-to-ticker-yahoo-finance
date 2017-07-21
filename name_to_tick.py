@@ -44,13 +44,16 @@ def company_data(self):
     opening_price=company.get_open()
     closing_price=company.get_prev_close()
     percent_change=company.get_percent_change()
+    name_from_tick=company.get_name()
 
-    return opening_price,closing_price, percent_change
+    listval=[opening_price,closing_price,percent_change,name_from_tick]
+    return listval
 
 
 #Comment out when testing
 company_name=input("Enter a company name: ")
 company=name_convert(company_name)
 print(company_data(company))
+
 
 
